@@ -15,11 +15,12 @@ private:
     Horario*horario;
     Profesor*Maestro;
 
+
 public:
-    Materia(std::string,std::string);
-    Materia(std::string,std::string,Horario,Profesor);
-    void setHorario(Horario);
-    void setMaestro(Profesor);
+    Materia(std::string nombre,std::string clave );
+    Materia(std::string nombre,std::string clave,Horario*horario,Profesor*maestro);
+    void setHorario(Horario*horario);
+    void setMaestro(Profesor*profesor);
     std::string getNombre();
     std::string getClave();
     Horario*getHorario();

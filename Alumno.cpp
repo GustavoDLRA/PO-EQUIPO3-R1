@@ -11,20 +11,18 @@
         this->peso=0;
         this->gene="";
         this->matricula="";
-        //FALTA AGREGARLE A ESTE MATERIAS[].
-    }
-Alumno::Alumno(std::string, std::string, char, std::string, std::string) {
-    this->nombre=nombre;
-    this->fechaNac=fechaNac;
-    this->genero = genero;
-    this->estatura=estatura;
-    this->peso=peso;
-    this->gene=gene;
-    this->matricula=matricula;
-    //FALTA AGREGARLE A ESTE MATERIAS[].
-}
-void Alumno::setHorario(Horario) {
 
+    }
+Alumno::Alumno(std::string n, std::string fNac, char gen, std::string matricula, std::string generacion) {
+   this->nombre=n;
+   this->fechaNac=fNac;
+   this->genero=gen;
+   this->matricula=matricula;
+   this->gene=generacion;
+}
+
+void Alumno::setHorario(Horario*horario) {
+Horario*to_String();
 }
 Horario*Alumno::getHorario() {
 
@@ -32,6 +30,19 @@ Horario*Alumno::getHorario() {
 std::string Alumno::getGene() {
     return gene;
 }
+
 std::string Alumno::getMatricula(){
     return matricula;
 }
+void Alumno::setMaterias(Materia *m[]) {
+
+}
+Materia*Alumno::getMateria() {
+
+}
+std::string Alumno::toString() {
+    std::string stringAl ="";
+    stringAl = "Nombre: " + nombre+ ", Fecha de Nac: "+fechaNac +", Genero: "+ genero +", Matricula:" +matricula + "Generación"+ gene;
+    return stringAl;
+}
+

@@ -8,22 +8,25 @@
 
 #include "Persona.h"
 #include "Horario.h"
+#include "Materia.h"
 #include <iostream>
-class Alumno: virtual Persona {
+class Alumno: virtual public Persona {
     private:
     std::string matricula;
     std::string gene;
-    //Materias:Materias[6]
+    Materia*materia[6];
+
 
     public:
     Alumno();
-    Alumno(std::string, std::string,char,std::string,std::string );
-    void setHorario(Horario);
-    //void setMaterias(Materias[]);
+    Alumno(std::string n, std::string fNac,char gen,std::string matricula,std::string generacion);
+    void setHorario(Horario*horario);
+    void setMaterias(Materia*m[]);
     Horario*getHorario();
-    //Materias[]*getMaterias();
+    Materia*getMateria();
     std::string getMatricula;
     std::string getGene();
+    std::string toString();
 
 };
 

@@ -13,7 +13,10 @@ private:
    int minutos;
    int segundos;
 public:
- FormatoHora(int, int, int);
+ FormatoHora(int h, int m, int s);
+ int getHoras();
+ int getMinutos();
+ int getSegundos();
  std::string to_String();
  bool validaHrs(int);
  bool validaMS(int);

@@ -10,17 +10,17 @@
 #include "Horario.h"
 #include <iostream>
 
-class Profesor: virtual Persona {
+class Profesor: virtual public Persona {
 private:
     std::string nomina;
 public:
     Profesor();
-    Profesor(std::string,std::string,char,std::string );
-    void setHorario(Horario);
-    //void setMaterias(Materias[]);
+    Profesor(std::string n,std::string fNac,char gen,std::string nomina );
+    void setHorario(Horario*horario);
     Horario*getHorario();
-    //Materias[]*getMaterias();
     std::string getNomina();
+    std::string toString();
+
 
 };
 

@@ -16,13 +16,13 @@ private:
   std::string aula;
 
 public:
-   Horario(FormatoHora,FormatoHora,std::string);
-   Horario(int,int,int,int,int,int);
-   void setAula(std::string);
+   Horario(FormatoHora inicio,FormatoHora fin,std::string);
+   Horario(int h, int m, int s, FormatoHora*inicio, FormatoHora*fin, std::string aula);
+   FormatoHora*CalculaDuracion();
+   void setAula(std::string aula);
    FormatoHora*getInicio();
    FormatoHora*getFin();
    std::string getAula();
-   FormatoHora*CalculaDuracion();
     std::string toString();
 
 };
